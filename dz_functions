@@ -1,11 +1,23 @@
-var array = ['я','умею','писать','рекурсивные','функции'];
-var n = 0;
-function consoleRec(array,length){
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>study</title>
+    <script >
+        var array = ['я','умею','писать','рекурсивные','функции'];
+        var n = 0;
+        function consoleRec(array,length){
 
-    console.log(array[n]);
-    n = n+1;
-    if(n <= array.length){
-        consoleRec(array,n)
-    }
-}
-consoleRec(array,n);
+            console.log(array[n]);
+            n = n+1;
+            if(n <= array.length){
+                consoleRec(array,n)
+            }
+        }
+        consoleRec(array,n);
+    </script>
+</head>
+<body>
+study
+</body>
+</html>
