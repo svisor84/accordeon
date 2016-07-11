@@ -1,6 +1,6 @@
-let array = ['я','умею','писать','рекурсивные','функции'];
-let n = 0;
-export function consoleRec(array,length){
+var array = ['я','умею','писать','рекурсивные','функции'];
+var n = 0;
+function consoleRec(array,length){
 
     console.log(array[n]);
     n = n+1;
