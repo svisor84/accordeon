@@ -1,6 +1,6 @@
         var array = ['я','умею','писать','рекурсивные','функции'];
         var n = 0;
-        function consoleRec(array,length){
+       export function consoleRec(array,position){
 
             console.log(array[n]);
             n = n+1;
