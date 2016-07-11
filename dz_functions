@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>study</title>
-    <script >
         var array = ['я','умею','писать','рекурсивные','функции'];
         var n = 0;
         function consoleRec(array,length){
@@ -15,9 +9,3 @@
             }
         }
         consoleRec(array,n);
-    </script>
-</head>
-<body>
-study
-</body>
-</html>
