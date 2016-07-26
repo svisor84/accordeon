@@ -1,5 +1,5 @@
 //Первая домашка,
-function prepend(newElement,container)
+module.exports = function prepend(newElement,container)
 {
   container.insertBefore(newElement, container.firstChild)
 }
@@ -10,8 +10,7 @@ newElement.innerText = 'hello'
 prepend(newElement,container)
 
 //вторая домашка
-(function(){
-export  function clearTextNodes(container){
+module.exports = function clearTextNodes(container){
         let childNodes = container.childNodes;
         for(let i=0; i<childNodes.length; i++){
           let node = childNodes[i];
@@ -22,5 +21,4 @@ export  function clearTextNodes(container){
                 clearTextNodes(node);
           }
         }
-      }
-})();
+      };
