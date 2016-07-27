@@ -1,17 +1,6 @@
 <html>
 <head>
-    <script>
-        
 
-        var accordion = document.querySelector(".accordion");
-        var cb1 = function(e){
-            console.log(e.currentTarget);
-            alert(e.type);
-        };
-        accordion.addEventListener('click', cb1)
-
-
-    </script>
     <style>
         body {
             font-size: 80%;
@@ -19,35 +8,30 @@
             width:360px;
         }
 
-        .accordionItem h2 {
+        .accordion h2 {
             margin: 0;
             font-size: 1em;
-            padding: 0.4em;
+            padding: 1em;
             color: white;
-            background-color: indianred;
-            border-bottom: 1px solid blue;
+            background-color: grey;
+            border-radius: 13px;
+            border-bottom-style: double;
         }
 
-        .accordionItem h2:hover {
+        .accordion h2:hover {
             cursor: pointer;
+            background-color: darkslategrey;
         }
 
-        .accordionItem div {
+        .accordion div {
             margin: 0;
             padding: 1em 0.4em;
-            background-color: white;
-            border-bottom: 1px solid cornflowerblue
-        border-bottom: 1px solid red;
+            background-color: darkslategrey;
+            border-radius: 13px;
+            color: white;
+            border-bottom-style: groove;
         }
 
-        .accordionItem.hide h2 {
-            color: black;
-            background-color: cornflowerblue;
-        }
-
-        .accordionItem.hide div {
-            display: none;
-        }
         .inner-list {
             display: none;
             transition: opacity 1s;
@@ -64,47 +48,57 @@
 <body>
 <h1>Тестовый аккордеон</h1>
 <div class="accordion">
-    <div class="accordionItem">
         <h2 class="inner-link">основы языка и как нанем говорить правильно</h2>
         <div class="inner-list">
-            <p>Типы данных, значения и переменные</p>
+            <p>Типы данных, значения и переменные0</p>
             <p>Выражения и операторы инструкции</p>
         </div>
-    </div>
-
-    <div class="accordionItem">
         <h2 class="inner-link">функции</h2>
         <div class="inner-list">
-            <p>Лексическая структура</p>
-            <p>Типы данных, значения и переменные</p>
+            <p>Лексическая структура1</p>
+            <p>Типы данных, значения и переменные1</p>
             <p>Выражения и операторы инструкции</p>
         </div>
-    </div>
-
-    <div class="accordionItem">
         <h2 class="inner-link">Обработка ошибок и отладка</h2>
         <div class="inner-list">
-            <p>Лексическая структура</p>
-            <p>Типы данных, значения и переменные</p>
+            <p>Лексическая структура2</p>
+            <p>Типы данных, значения и переменные2</p>
             <p>Выражения и операторы инструкции</p>
         </div>
-    </div>
-    <div class="accordionItem">
         <h2 class="inner-link">Объекты и массивы</h2>
         <div class="inner-list">
-            <p>Лексическая структура</p>
-            <p>Типы данных, значения и переменные</p>
+            <p>Лексическая структура3</p>
+            <p>Типы данных, значения и переменные3</p>
             <p>Выражения и операторы инструкции</p>
         </div>
-    </div>
-    <div class="accordionItem">
         <h2 class="inner-link">события</h2>
         <div class="inner-list">
-            <p>Лексическая структура</p>
-            <p>Типы данных, значения и переменные</p>
+            <p>Лексическая структура4</p>
+            <p>Типы данных, значения и переменные4</p>
             <p>Выражения и операторы инструкции</p>
         </div>
-    </div>
 </div>
+<script>
+
+
+    var accordion = document.querySelector(".accordion");
+    var cb1 = function(e){
+
+        if(e.target.nextElementSibling.className != 'inner-list show')
+        {
+            for (var el of accordion.children){
+                if(el.className == 'inner-list show'){
+                    el.className = 'inner-list';
+                }
+            }
+            e.target.nextElementSibling.className += ' show';
+        }
+        else
+            e.target.nextElementSibling.className = 'inner-list';
+        };
+    accordion.addEventListener('click', cb1)
+
+
+</script>
 </body>
 </html>
