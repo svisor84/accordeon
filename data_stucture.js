@@ -1,4 +1,4 @@
-function myFuncs() {
+export function myFuncs() {
     var obj = {
         newForeach: function newForeach(source) {
             if (!Array.isArray(source) || source.length == 0) {throw new SyntaxError("Ошибка в данных, не массив!")};
@@ -86,8 +86,8 @@ function myFuncs() {
 }
 var arr = [1,2,3,4,5];
 var myFuncs = myFuncs();
-/*console.log(myFuncs.newForeach(arr));*/
-/*console.log(myFuncs.newFilter(arr, value => value > 2 ));*/
-/*console.log(myFuncs.newMap(arr, value => value > 2 ));*/
-/*console.log(myFuncs.newSlice(arr,2,-5));*/
-/*console.log(myFuncs.newReduce(arr,function(sum, current){ return sum + current},5));*/
+console.log(myFuncs.newForeach(arr));
+console.log(myFuncs.newFilter(arr, value => value > 2 ));
+console.log(myFuncs.newMap(arr, value => value > 2 ));
+console.log(myFuncs.newSlice(arr,2,-5));
+console.log(myFuncs.newReduce(arr,function(sum, current){ return sum + current},5));
