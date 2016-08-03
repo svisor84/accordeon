@@ -4,4 +4,4 @@ export function timer(time){
             setTimeout(resolve, time);}
     );
 };
-timer(3000).then(() => console.log('я вывелась через 3 секунды'));
+timer(3000).then(() => console.log('привет, прошло 3 секунды'));
